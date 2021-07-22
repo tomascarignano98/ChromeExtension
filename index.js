@@ -12,7 +12,13 @@ inputBtn.addEventListener("click", function () {
 });
 
 function renderLeads() {
+  const lead = myLeads[myLeads.length - 1];
   const li = document.createElement("li");
-  li.textContent = myLeads[myLeads.length - 1];
+  const a = document.createElement("a");
+
+  a.href = lead;
+  a.target = "_blank";
+  a.textContent = lead;
+  li.append(a);
   ulEl.append(li);
 }
