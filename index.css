@@ -25,3 +25,7 @@ button {
   font-weight: bold;
   padding: 10px 20px;
 }
+
+li {
+  margin-left: 20px;
+}
