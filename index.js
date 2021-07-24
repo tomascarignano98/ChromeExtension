@@ -11,8 +11,10 @@ if (leadsFromLocalStorage) {
 }
 
 inputBtn.addEventListener("click", function () {
-  if (inputEl.value && !myLeads.includes(inputEl.value)) {
-    myLeads.push(inputEl.value);
+  const inputValue = !myLeads.includes(inputEl.value) && inputEl.value; // if myLeads array doesn't include the given input value and the value is truthy.
+
+  if (inputValue) {
+    myLeads.push(inputValue);
     inputEl.value = "";
     localStorage.setItem("myLeads", JSON.stringify(myLeads));
 
