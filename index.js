@@ -27,15 +27,17 @@ deleteBtn.addEventListener("click", () => {
 });
 
 function renderLeads() {
-  const li = document.createElement("li");
-  const a = document.createElement("a");
-  a.target = "_blank";
+  ulEl.innerHTML = "";
 
   myLeads.forEach((lead) => {
+    const a = document.createElement("a");
+    a.target = "_blank";
     a.href = lead;
     a.textContent = lead;
 
+    const li = document.createElement("li");
     li.append(a);
+
     ulEl.append(li);
   });
 }
