@@ -11,7 +11,7 @@ if (leadsFromLocalStorage) {
 }
 
 inputBtn.addEventListener("click", function () {
-  if (inputEl.value) {
+  if (inputEl.value && !myLeads.includes(inputEl.value)) {
     myLeads.push(inputEl.value);
     inputEl.value = "";
     localStorage.setItem("myLeads", JSON.stringify(myLeads));
