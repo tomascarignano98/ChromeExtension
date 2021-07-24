@@ -35,6 +35,10 @@ ul {
   margin-top: 20px;
 }
 
+li {
+  margin: 10px 0;
+}
+
 li a {
   color: #5f9341;
 }
