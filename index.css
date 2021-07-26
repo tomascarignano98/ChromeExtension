@@ -1,3 +1,12 @@
+/* Global variables*/
+
+:root {
+  --clr-primary: #5f9341;
+  --clr-body: #394755;
+}
+
+/* universal selector */
+
 *,
 *::before,
 *::after {
@@ -6,33 +15,63 @@
   padding: 0;
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  padding: 10px;
-  line-height: 1.5;
-  min-width: 400px;
+/* Typography */
+
+::selection {
+  background: var(--clr-primary);
+  color: #fff;
 }
 
-input {
-  border: 1px solid #5f9341;
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+body {
+  background-color: #fff;
+  color: var(--clr-body);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  line-height: 1.5;
+  min-height: 150px;
+  min-width: 400px;
+  padding: 10px;
+}
+
+/* styles */
+
+.text-input {
+  border: 1px solid var(--clr-primary);
+  color: var(--clr-body);
+  margin-bottom: 5px;
   padding: 10px;
   width: 100%;
-  margin-bottom: 5px;
 }
 
-button {
-  background-color: #5f9341;
-  border: 1px solid #5f9341;
-  color: #fff;
+.btn {
+  border: 1px solid var(--clr-primary);
   cursor: pointer;
   font-weight: bold;
   padding: 10px 20px;
 }
 
-ul {
+.btn--primary {
+  background-color: var(--clr-primary);
+  color: #fff;
+}
+
+.btn--outline {
+  background-color: #fff;
+  color: var(--clr-primary);
+}
+
+.list {
   list-style: none;
-  padding: 0;
   margin-top: 20px;
+  padding: 0;
 }
 
 li {
@@ -40,10 +79,5 @@ li {
 }
 
 li a {
-  color: #5f9341;
-}
-
-#delete-btn {
-  color: #5f9341;
-  background-color: #fff;
+  color: var(--clr-primary);
 }
