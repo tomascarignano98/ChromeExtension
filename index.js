@@ -10,6 +10,10 @@ if (leadsFromLocalStorage) {
   renderLeads();
 }
 
+chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+  inputEl.value = tabs[0].url;
+});
+
 inputBtn.addEventListener("click", function () {
   const inputValue = !myLeads.includes(inputEl.value) && inputEl.value; // if myLeads array doesn't include the given input value and the value is truthy.
 
